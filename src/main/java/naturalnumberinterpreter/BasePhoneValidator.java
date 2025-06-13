@@ -11,3 +11,6 @@ public class BasePhoneValidator {
         }
     }
 }
+
+// IntelliJ keeps throwing a simplify Warning
+// Could be simplified into a single line with OR and removing the else statement but structured this way for readability

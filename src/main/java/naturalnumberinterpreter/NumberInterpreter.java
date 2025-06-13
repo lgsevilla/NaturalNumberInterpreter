@@ -11,12 +11,20 @@ public class NumberInterpreter {
 
         String[] parts = inputLine.split("\\s+");
 
+        String interpretedNumber = interpret(parts);
+
+        System.out.println("Interpreted number sequence: " + interpretedNumber);
+        System.out.println("Phone number: " + (BasePhoneValidator.isValid(interpretedNumber) ? "VALID" : "INVALID")); // Calls on naturalnumberinterpreter.BasePhoneValidator to check the interpreted number
+        scanner.close();
+    }
+
+    private static String interpret(String[] parts) {
         // Validate sequence
         for (String part : parts) {
             if (!isValidNumberPart(part)) {
-                System.out.println("Invalid input: \"" + part + "\". Only 1 to 3 digit numbers allowed.");
-                scanner.close();
-                return;
+                // Old print line, changed to throw error to allow for testing
+                // System.out.println("Invalid input: \"" + part + "\". Only 1 to 3 digit numbers allowed.");
+                throw new IllegalArgumentException("Invalid input: \"" + part + "\". Only 1 to 3 digit numbers allowed.");
             }
         }
 
@@ -26,10 +34,7 @@ public class NumberInterpreter {
             fullNumber.append(part);
         }
 
-        String interpretedNumber = fullNumber.toString();
-        System.out.println("Interpreted number sequence: " + interpretedNumber);
-        System.out.println("Phone number: " + (BasePhoneValidator.isValid(interpretedNumber) ? "VALID" : "INVALID")); // Calls on naturalnumberinterpreter.BasePhoneValidator to check the interpreted number
-        scanner.close();
+        return fullNumber.toString();
     }
 
     private static boolean isValidNumberPart(String input) {
