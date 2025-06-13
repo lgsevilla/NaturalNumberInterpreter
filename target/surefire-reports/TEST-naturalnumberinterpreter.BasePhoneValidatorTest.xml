@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="naturalnumberinterpreter.NumberInterpreterTest" time="0.011" tests="16" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.044" tests="24" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -56,20 +56,28 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="invalidInputNonNumericMiddleBlockTest" classname="naturalnumberinterpreter.NumberInterpreterTest" time="0.003"/>
-  <testcase name="validInputZeroesOnlyBlockTest" classname="naturalnumberinterpreter.NumberInterpreterTest" time="0.0"/>
-  <testcase name="validInputSingleBlockTest" classname="naturalnumberinterpreter.NumberInterpreterTest" time="0.0"/>
-  <testcase name="invalidInputNonNumericLeadingBlockTest" classname="naturalnumberinterpreter.NumberInterpreterTest" time="0.0"/>
-  <testcase name="validInputZeroOnlyBlockTest" classname="naturalnumberinterpreter.NumberInterpreterTest" time="0.0"/>
-  <testcase name="validInputSingleDigitBlockTest" classname="naturalnumberinterpreter.NumberInterpreterTest" time="0.0"/>
-  <testcase name="invalidInputLengthySingleBlockTest" classname="naturalnumberinterpreter.NumberInterpreterTest" time="0.0"/>
-  <testcase name="invalidInputLengthyTrailingBlockTest" classname="naturalnumberinterpreter.NumberInterpreterTest" time="0.001"/>
-  <testcase name="invalidInputEmptyBlockTest" classname="naturalnumberinterpreter.NumberInterpreterTest" time="0.0"/>
-  <testcase name="invalidInputNonNumericTrailingBlockTest" classname="naturalnumberinterpreter.NumberInterpreterTest" time="0.0"/>
-  <testcase name="invalidInputNonNumericSingleBlockTest" classname="naturalnumberinterpreter.NumberInterpreterTest" time="0.0"/>
-  <testcase name="validInputLeadingZeroBlockTest" classname="naturalnumberinterpreter.NumberInterpreterTest" time="0.0"/>
-  <testcase name="invalidInputLengthyLeadingBlockTest" classname="naturalnumberinterpreter.NumberInterpreterTest" time="0.001"/>
-  <testcase name="validInputLeadingZeroesBlockTest" classname="naturalnumberinterpreter.NumberInterpreterTest" time="0.0"/>
-  <testcase name="invalidInputLengthyMiddleBlockTest" classname="naturalnumberinterpreter.NumberInterpreterTest" time="0.0"/>
-  <testcase name="validInputMultipleBlocksTest" classname="naturalnumberinterpreter.NumberInterpreterTest" time="0.0"/>
+  <testcase name="validInternationalCellphoneTest" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.008"/>
+  <testcase name="invalidCellphoneNumberTest(String)[1]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.006"/>
+  <testcase name="invalidCellphoneNumberTest(String)[2]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.001"/>
+  <testcase name="invalidCellphoneNumberTest(String)[3]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.001"/>
+  <testcase name="invalidCellphoneNumberTest(String)[4]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.0"/>
+  <testcase name="invalidCellphoneNumberTest(String)[5]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.0"/>
+  <testcase name="invalidCellphoneNumberTest(String)[6]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.0"/>
+  <testcase name="invalidCellphoneNumberTest(String)[7]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.001"/>
+  <testcase name="invalidCellphoneNumberTest(String)[8]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.0"/>
+  <testcase name="invalidCellphoneNumberTest(String)[9]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.0"/>
+  <testcase name="invalidCellphoneNumberTest(String)[10]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.001"/>
+  <testcase name="invalidLandlineNumberTest(String)[1]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.0"/>
+  <testcase name="invalidLandlineNumberTest(String)[2]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.001"/>
+  <testcase name="invalidLandlineNumberTest(String)[3]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.0"/>
+  <testcase name="invalidLandlineNumberTest(String)[4]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.001"/>
+  <testcase name="invalidLandlineNumberTest(String)[5]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.0"/>
+  <testcase name="invalidLandlineNumberTest(String)[6]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.0"/>
+  <testcase name="invalidLandlineNumberTest(String)[7]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.001"/>
+  <testcase name="invalidLandlineNumberTest(String)[8]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.0"/>
+  <testcase name="invalidLandlineNumberTest(String)[9]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.0"/>
+  <testcase name="invalidLandlineNumberTest(String)[10]" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.0"/>
+  <testcase name="validLocalCellphoneTest" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.0"/>
+  <testcase name="validInternationalLandlineTest" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.0"/>
+  <testcase name="validLocalLandlineTest" classname="naturalnumberinterpreter.BasePhoneValidatorTest" time="0.001"/>
 </testsuite>
