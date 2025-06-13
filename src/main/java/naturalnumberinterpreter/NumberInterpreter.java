@@ -18,7 +18,7 @@ public class NumberInterpreter {
         scanner.close();
     }
 
-    private static String interpret(String[] parts) {
+    public static String interpret(String[] parts) {
         // Validate sequence
         for (String part : parts) {
             if (!isValidNumberPart(part)) {
