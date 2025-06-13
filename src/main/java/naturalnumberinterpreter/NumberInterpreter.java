@@ -1,3 +1,5 @@
+package naturalnumberinterpreter;
+
 import java.util.Scanner;
 
 public class NumberInterpreter {
@@ -26,7 +28,7 @@ public class NumberInterpreter {
 
         String interpretedNumber = fullNumber.toString();
         System.out.println("Interpreted number sequence: " + interpretedNumber);
-        System.out.println("Phone number: " + (BasePhoneValidator.isValid(interpretedNumber) ? "VALID" : "INVALID")); // Calls on BasePhoneValidator to check the interpreted number
+        System.out.println("Phone number: " + (BasePhoneValidator.isValid(interpretedNumber) ? "VALID" : "INVALID")); // Calls on naturalnumberinterpreter.BasePhoneValidator to check the interpreted number
         scanner.close();
     }
 
