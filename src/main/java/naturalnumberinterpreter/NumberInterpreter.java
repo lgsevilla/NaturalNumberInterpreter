@@ -1,5 +1,6 @@
 package naturalnumberinterpreter;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class NumberInterpreter {
@@ -10,11 +11,20 @@ public class NumberInterpreter {
         String inputLine = scanner.nextLine().trim();
 
         String[] parts = inputLine.split("\\s+");
+        // Trial code block begins
+        List<String> interpretations = AmbiguityInterpreter.generateInterpretations(parts);
 
-        String interpretedNumber = interpret(parts);
+        int count = 1;
+        for (String interpretation : interpretations) {
+            boolean valid = BasePhoneValidator.isValid(interpretation);
+            System.out.println("Interpretation " + count + ": "  + interpretation + " [phone number: " + (valid ? "VALID" : "INVALID") + "]");
+            count++;
+        }
+        // Trial code block ends here
+        //String interpretedNumber = interpret(parts);
 
-        System.out.println("Interpreted number sequence: " + interpretedNumber);
-        System.out.println("Phone number: " + (BasePhoneValidator.isValid(interpretedNumber) ? "VALID" : "INVALID")); // Calls on naturalnumberinterpreter.BasePhoneValidator to check the interpreted number
+        //System.out.println("Interpreted number sequence: " + interpretedNumber);
+        //System.out.println("Phone number: " + (BasePhoneValidator.isValid(interpretedNumber) ? "VALID" : "INVALID")); // Calls on naturalnumberinterpreter.BasePhoneValidator to check the interpreted number
         scanner.close();
     }
 
