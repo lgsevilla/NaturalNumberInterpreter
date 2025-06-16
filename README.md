@@ -1,6 +1,6 @@
 # NumberInterpreter
 
-A simple Java console application using Maven that interprets a sequence of digit blocks as possible phone numbers. The app supports basic validation and explores ambiguity in number groupings (e.g. `69` could mean `69` or `60 9`).
+A simple Java console application built with Maven that interprets a sequence of digit blocks as potential phone numbers. The app intelligently explores ambiguities inspired by Greek number pronunciation conventions — for example, the input 69 might represent 69, 60 9, or even trigger deeper decompositions like 600 9. It validates each interpretation to determine whether it forms a valid 10- or 14-digit phone number.
 
 ---
 
