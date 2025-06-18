@@ -16,15 +16,16 @@ public class NumberInterpreter {
 
         int count = 1;
         for (String interpretation : interpretations) {
-            boolean valid = BasePhoneValidator.isValid(interpretation);
-            System.out.println("Interpretation " + count + ": "  + interpretation + " [phone number: " + (valid ? "VALID" : "INVALID") + "]");
-            count++;
+             boolean valid = BasePhoneValidator.isValid(interpretation);
+             System.out.println("Interpretation " + count + ": "  + interpretation + " [phone number: " + (valid ? "VALID" : "INVALID") + "]");
+             count++;
         }
         // Trial code block ends here
-        //String interpretedNumber = interpret(parts);
+        // String interpretedNumber = interpret(parts);
 
-        //System.out.println("Interpreted number sequence: " + interpretedNumber);
-        //System.out.println("Phone number: " + (BasePhoneValidator.isValid(interpretedNumber) ? "VALID" : "INVALID")); // Calls on naturalnumberinterpreter.BasePhoneValidator to check the interpreted number
+
+        // System.out.println("Interpreted number sequence: " + interpretedNumber);
+        // System.out.println("Phone number: " + (BasePhoneValidator.isValid(interpretedNumber) ? "VALID" : "INVALID")); // Calls on naturalnumberinterpreter.BasePhoneValidator to check the interpreted number
         scanner.close();
     }
 
