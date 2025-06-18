@@ -1,6 +1,17 @@
 package naturalnumberinterpreter;
 
+/**
+ * BasePhoneValidator checks for valid Greek phone numbers.
+ * A string is considered a valid Greek number if it contains 10 digits and starts with 2 (landline) or 69 (mobile),
+ * or if it contains 14 digits starting with 00302 (international, landline) or 003069 (international, mobile).
+ */
 public class BasePhoneValidator {
+    /**
+     * Validates a number string based on the length and prefix.
+     *
+     * @param number The phone number as a string.
+     * @return true if the number is a valid Greek phone number, false otherwise.
+     */
     public static boolean isValid(String number) {
         if (number.length() == 14 && (number.startsWith("00302") || number.startsWith("003069"))) {
             return true; // Checks whether the number is 14 digits because of 0030

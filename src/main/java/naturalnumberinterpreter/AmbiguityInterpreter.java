@@ -2,14 +2,33 @@ package naturalnumberinterpreter;
 
 import java.util.*;
 
+/**
+ * The AmbiguityInterpreter class is responsible for generating all possible
+ * permutations of a sequence of number blocks. It does this by applying transformation rules
+ * in a case-by-case basis. The rules account for ambiguities that may arise in spoken number
+ * expressions in Greek, such as merging, splitting, or combining adjacent numeric values.
+ */
 public class AmbiguityInterpreter {
-
+    /**
+     * Generates all valid permutations or interpretations from the array of numeric blocks.
+     *
+     * @param inputParts An array of strings that represent digit blocks.
+     * @return A list of interpreted number strings based on the ambiguity rules.
+     */
     public static List<String> generateInterpretations(String[] inputParts) {
         Set<String> results = new LinkedHashSet<>();
         explore(new ArrayList<>(), inputParts, 0, results);
         return new ArrayList<>(results);
     }
 
+    /**
+     * Recursively explores all valid transformations of the input array and adds these to the result set.
+     *
+     * @param path The current path of combined number parts.
+     * @param parts The original input parts that have to be interpreted.
+     * @param index The current index in the input array.
+     * @param results The set that collects all valid interpretations.
+     */
     private static void explore(List<String> path, String[] parts, int index, Set<String> results) {
         if (index >= parts.length) {
             String joined = String.join("", path).replaceAll("\\s", "").trim();
